@@ -41,10 +41,21 @@ body {
         grid-column: 1/5;
         grid-row: 1/5;
     }
+
+    &__remaining {
+        grid-row: 4/5;
+        grid-column: 1/-1;
+
+        text-align: center;
+        margin-top: 33px;
+
+        color: grey;
+        font-size: 22px;
+    }
 }
 
 .picker {
-    grid-column: 5/10;
+    grid-column: 5/9;
     grid-row: 2/4;
     //background: grey;
     font-size: 80px;
@@ -64,7 +75,7 @@ body {
 
 .button {
     grid-row: 3/4;
-    grid-column: 5/10;
+    grid-column: 5/9;
 
     justify-self: center;
 
@@ -78,13 +89,77 @@ body {
 
 }
 
+.change-date {
+    grid-row: 2/3;
+    grid-column: 4/5;
+    justify-self: start;
+
+    font-size: 24px;
+    line-height: 19px;
+    text-align: center;
+    color: white;
+
+    background-color: transparent;
+    border: none;
+
+    transform: rotate(-68deg) translate(-155px, -75px);
+    width: 150%;
+    height: 20%;
+
+    &:focus {
+        outline: none;
+    }
+
+    i {
+        padding-right: 20px;
+    }
+
+}
+
 .clock {
     grid-row: 3/4;
-    grid-column: 2/11;
+    grid-column: 2/10;
 
     clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
     background-color: grey;
-    
+
+    width: 100%;
     height: 80%;
-    align-self: end
+    align-self: end;
+    justify-items: center;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+
+    text-align: center;
+    justify-content: center;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: 22px;
+        line-height: 25px;
+        color: #ffff00
+    }
+    &__amount {
+        font-size: 90px;
+        line-height: 115px;
+        color: white;
+    }
+
+}
+
+.large-text {
+    grid-row: 1/3;
+    grid-column: 7/9;
+    align-self: center;
+    justify-self: center;
+
+    color: #e6e6e6;
+    font-size: 220px;
 }

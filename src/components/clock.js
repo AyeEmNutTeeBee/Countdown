@@ -4,21 +4,21 @@ class Clock extends Component {
     render() {
         return (
             <div className="clock">
-                <div className="clock__days">
+                <div className="clock__days clock__box">
                     <label className="clock__title">DAYS</label>
-                    <label className="clock__title">20</label>
+                    <label className="clock__amount">{this.props.timeRemaining.days}</label>
                 </div>
-                <div className="clock__hours">
+                <div className="clock__hours clock__box">
                     <label className="clock__title">HOURS</label>
-                    <label className="clock__title">20</label>
+                    <label className="clock__amount">{this.props.timeRemaining.hours}</label>
                 </div>
-                <div className="clock__minutes">
+                <div className="clock__minutes clock__box">
                     <label className="clock__title">MINUTES</label>
-                    <label className="clock__title">20</label>
+                    <label className="clock__amount">{this.props.timeRemaining.minutes}</label>
                 </div>
-                <div className="clock__seconds">
+                <div className="clock__seconds clock__box">
                     <label className="clock__title">SECONDS</label>
-                    <label className="clock__title">20</label>
+                    <label className="clock__amount">{this.props.timeRemaining.seconds}</label>
                 </div>
             </div>
         )
